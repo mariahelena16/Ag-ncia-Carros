@@ -1,0 +1,12 @@
+nav,ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #cb82bf;
+    color: white;
+    padding-inline: 30px;
+    padding-block: 10px;
+}
+ul{
+    gap: 30px;
+}
