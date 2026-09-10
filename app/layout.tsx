@@ -1,19 +1,17 @@
-import type { Metadata } from "next";
-import "./globals.css";
-import NavBar from "./components/NavBar";
+import type { Metadata } from 'next';
+import './globals.css';
+import AuthGuard from './components/AuthGuard';
 
 export const metadata: Metadata = {
-  title: "Veiculos - Agência de Carros",
-  description: "Gerenciamento de veiculos e clientes da agência de carros",
+  title: 'Invent Berry',
+  description: 'Sistema moderno de controle de estoque e movimentações',
 };
 
-export default function RootLayout({ children }: LayoutProps <"/"> ){
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html
-      lang="en"    >
-      <body className="min-h-full flex flex-col">
-        <NavBar/>
-        {children}
+    <html lang="pt-BR">
+      <body className="min-h-screen bg-[#09090b] text-white antialiased">
+        <AuthGuard>{children}</AuthGuard>
       </body>
     </html>
   );

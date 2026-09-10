@@ -1,12 +1,98 @@
-nav,ul{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #cb82bf;
-    color: white;
-    padding-inline: 30px;
-    padding-block: 10px;
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.9rem 1.5rem;
+  background: rgba(12, 12, 17, 0.78);
+  border-bottom: 1px solid rgba(248, 113, 113, 0.2);
+  backdrop-filter: blur(14px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.18);
 }
-ul{
-    gap: 30px;
+
+.brand-wrap {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+}
+
+.brand-mark {
+  display: grid;
+  place-items: center;
+  width: 2.4rem;
+  height: 2.4rem;
+  border-radius: 0.8rem;
+  background: linear-gradient(135deg, #ef4444 0%, #f87171 100%);
+  color: white;
+  font-weight: 900;
+  box-shadow: 0 10px 25px rgba(239, 68, 68, 0.35);
+}
+
+.brand-title {
+  color: #fff;
+  font-size: 0.95rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.brand-subtitle {
+  color: #fca5a5;
+  font-size: 0.75rem;
+}
+
+.nav-list {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar a {
+  color: #f3f4f6;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.55rem 0.9rem;
+  border-radius: 999px;
+  transition: all 0.2s ease;
+}
+
+.navbar a:hover,
+.navbar a.active {
+  color: #fff;
+  background: rgba(239, 68, 68, 0.18);
+  box-shadow: inset 0 0 0 1px rgba(248, 113, 113, 0.18);
+}
+
+.logout-button {
+  border: 1px solid rgba(248, 113, 113, 0.25);
+  background: rgba(239, 68, 68, 0.1);
+  color: #fca5a5;
+  border-radius: 999px;
+  padding: 0.7rem 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.logout-button:hover {
+  background: rgba(239, 68, 68, 0.18);
+  color: #fff;
+}
+
+@media (max-width: 720px) {
+  .navbar {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .nav-list {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 }
